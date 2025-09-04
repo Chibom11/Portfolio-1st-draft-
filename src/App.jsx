@@ -204,7 +204,7 @@ const Hero = ({ onLinkHover, onLinkLeave }) => {
 };
 
 const Skills = ({ onLinkHover, onLinkLeave }) => (
-  <AnimatedSection id="skills" className="py-20 bg-slate-900/50 backdrop-blur-sm border-y border-slate-800">
+  <AnimatedSection id="skills" className="py-20 bg-transparent border-y border-slate-800">
     <div className="container mx-auto px-6 text-center">
       <h2 className="text-4xl font-bold text-cyan-300 mb-2 transition-all duration-300 hover:text-white hover:drop-shadow-[0_0_15px_rgba(0,255,255,0.8)]">My Tech Stack</h2>
       <p className="text-lg text-slate-300 mb-12">Technologies I'm proficient with and love to use.</p>
@@ -269,7 +269,7 @@ const ProjectCard = ({ project, onLinkHover, onLinkLeave }) => {
 };
 
 const Projects = ({ onLinkHover, onLinkLeave }) => (
-  <AnimatedSection id="projects" className="py-20 bg-slate-900/50 backdrop-blur-sm">
+  <AnimatedSection id="projects" className="py-20 bg-transparent">
     <div className="container mx-auto px-6">
       <h2 className="text-4xl font-bold text-cyan-300 text-center mb-12 transition-all duration-300 hover:text-white hover:drop-shadow-[0_0_15px_rgba(0,255,255,0.8)]">Featured Projects</h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -282,7 +282,7 @@ const Projects = ({ onLinkHover, onLinkLeave }) => (
 );
 
 const Contact = ({ onLinkHover, onLinkLeave }) => (
-  <AnimatedSection id="contact" className="py-20 bg-slate-900/50 backdrop-blur-sm border-y border-slate-800">
+  <AnimatedSection id="contact" className="py-20 bg-transparent border-y border-slate-800">
     <div className="container mx-auto px-6 text-center">
       <h2 className="text-4xl font-bold text-cyan-300 mb-4 transition-all duration-300 hover:text-white hover:drop-shadow-[0_0_15px_rgba(0,255,255,0.8)]">Get In Touch</h2>
       <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
@@ -302,7 +302,7 @@ const Contact = ({ onLinkHover, onLinkLeave }) => (
 );
 
 const Footer = ({ onLinkHover, onLinkLeave }) => (
-  <footer className="bg-slate-900/50 backdrop-blur-sm py-8">
+  <footer className="bg-transparent py-8">
     <div className="container mx-auto px-6 text-center text-slate-400">
       <div className="flex justify-center items-center space-x-6 mb-4">
         <a href={portfolioData.socials.github} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors" onMouseEnter={onLinkHover} onMouseLeave={onLinkLeave}><Icon name="github" className="w-6 h-6" /></a>
@@ -399,11 +399,9 @@ const AppBody = ({ onLinkHover, onLinkLeave }) => {
       <Header onLinkHover={onLinkHover} onLinkLeave={onLinkLeave} />
       <main>
         <Hero onLinkHover={onLinkHover} onLinkLeave={onLinkLeave} />
-        <div className="relative z-10">
-          <Skills onLinkHover={onLinkHover} onLinkLeave={onLinkLeave} />
-          <Projects onLinkHover={onLinkHover} onLinkLeave={onLinkLeave} />
-          <Contact onLinkHover={onLinkHover} onLinkLeave={onLinkLeave} />
-        </div>
+        <Skills onLinkHover={onLinkHover} onLinkLeave={onLinkLeave} />
+        <Projects onLinkHover={onLinkHover} onLinkLeave={onLinkLeave} />
+        <Contact onLinkHover={onLinkHover} onLinkLeave={onLinkLeave} />
       </main>
       <Footer onLinkHover={onLinkHover} onLinkLeave={onLinkLeave} />
     </>
@@ -446,6 +444,9 @@ export default function App() {
     </motion.div>
   );
 }
+
+
+
 
 
 
